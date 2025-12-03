@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Robot36 & SSTV – Les images secrètes qui chantent</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg: #f7fbff;
+      --card: #ffffff;
+      --accent: #ff6b6b;
+      --accent-soft: #ffe8e8;
+      --accent-2: #4dabf7;
+      --text: #233143;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, sans-serif;
+      background: radial-gradient(circle at top, #e3f2ff, #f7fbff 55%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px 16px 10px;
+    }
+
+    h1 {
+      font-size: 2.3rem;
+      margin: 0 0 0.4rem;
+      color: #123252;
+    }
+
+    header p.subtitle {
+      margin: 0;
+      font-size: 1.1rem;
+      color: #44556a;
+    }
+
+    .tagline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-soft);
+      color: #8b3333;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      margin-top: 14px;
+    }
+
+    main {
+      margin-top: 24px;
+      display: grid;
+      gap: 20px;
+    }
+
+    section {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 18px 18px 20px;
+      box-shadow: 0 10px 25px rgba(15, 35, 52, 0.08);
+    }
+
+    section h2 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    section h2 span.emoji {
+      font-size: 1.6rem;
+    }
+
+    p {
+      margin: 0.4rem 0;
+      font-size: 0.98rem;
+    }
+
+    ul, ol {
+      margin: 0.4rem 0 0.4rem 1.2rem;
+      padding-left: 0;
+      font-size: 0.96rem;
+    }
+
+    li + li {
+      margin-top: 0.3rem;
+    }
+
+    .pill {
+      display: inline-block;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #6c7a8a;
+      background: #f2f6fb;
+      padding: 3px 9px;
+      border-radius: 999px;
+      margin-bottom: 6px;
+    }
+
+    .highlight {
+      background: #fff6cf;
+      padding: 4px 7px;
+      border-radius: 6px;
+    }
+
+    a {
+      color: var(--accent-2);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+
+    a.button-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-2);
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.96rem;
+      box-shadow: 0 6px 14px rgba(0, 88, 171, 0.3);
+      margin-top: 8px;
+    }
+
+    a.button-link span.icon {
+      font-size: 1.2rem;
+    }
+
+    /* Simple illustration cards */
+    .illustration {
+      margin-top: 10px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #fdfbff, #e8f2ff);
+      padding: 10px;
+      border: 1px solid #dde6f4;
+    }
+
+    .illu-caption {
+      font-size: 0.86rem;
+      color: #546276;
+      margin-top: 6px;
+      text-align: center;
+    }
+
+    /* SVG responsiveness */
+    .illu-svg {
+      width: 100%;
+      max-height: 260px;
+      display: block;
+    }
+
+    .columns {
+      display: grid;
+      gap: 14px;
+    }
+
+    @media (min-width: 720px) {
+      .columns.two {
+        grid-template-columns: 1.25fr 1fr;
+        align-items: center;
+      }
+    }
+
+    .tips {
+      display: grid;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .tip {
+      background: #f4f8ff;
+      border-radius: 12px;
+      padding: 6px 10px;
+      font-size: 0.9rem;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+
+    .tip span.icon {
+      font-size: 1.2rem;
+      margin-top: 1px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 0.82rem;
+      color: #6a7485;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Les images secrètes de Robot36</h1>
+      <p class="subtitle">La cryptographie (presque) magique qui transforme des dessins en musique bizarre 🎶</p>
+      <div class="tagline">
+        <span>👧🧒 Pour les curieux de ~12 ans</span>
+      </div>
+    </header>
+
+    <main>
+      <!-- INTRO -->
+      <section id="intro">
+        <div class="pill">Introduction</div>
+        <h2><span class="emoji">🔐</span> Une image qui chante, ça existe ?</h2>
+        <p>
+          Imagine que ton dessin préféré se transforme en une suite de <strong>bips et de bruits étranges</strong>.
+          On envoie ces sons par radio… puis quelqu’un d’autre les réécoute avec son téléphone
+          et <span class="highlight">le dessin réapparaît comme par magie</span>.
+        </p>
+        <p>
+          Ce n’est pas de la magie noire, c’est de la <strong>SSTV</strong> (Slow Scan TV) en mode
+          <strong>Robot 36</strong>. C’est un mélange de <em>codage</em>, un peu de
+          <em>cryptographie</em> et beaucoup de fun.
+        </p>
+      </section>
+
+      <!-- C'EST QUOI LA SSTV ? -->
+      <section id="sstv">
+        <div class="pill">Découverte</div>
+        <h2><span class="emoji">📡</span> C’est quoi la SSTV et Robot36 ?</h2>
+        <div class="columns two">
+          <div>
+            <p>
+              La SSTV, c’est une façon d’envoyer des <strong>images très lentement</strong> sous forme de son.
+              On l’utilise souvent en radio amateur et même depuis certains satellites.
+            </p>
+            <ul>
+              <li><strong>SSTV</strong> : Slow Scan Television → une image envoyée pixel par pixel en audio.</li>
+              <li><strong>Robot 36</strong> : un “langage” particulier de la SSTV, qui dure environ 36 secondes.</li>
+              <li>Chaque couleur du dessin est convertie en une <strong>note plus ou moins aiguë</strong>.</li>
+            </ul>
+            <p>
+              Ton téléphone, avec l’appli <strong>Robot36</strong>, sait écouter ces notes et reconstruire
+              l’image cachée dans le son.
+            </p>
+          </div>
+
+          <!-- Illustration 1 : pipeline -->
+          <div class="illustration">
+            <svg class="illu-svg" viewBox="0 0 460 230" role="img" aria-labelledby="illu-sstv-title">
+              <title id="illu-sstv-title">
+                Schéma : image transformée en son SSTV puis redevenant image
+              </title>
+              <defs>
+                <linearGradient id="box1" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#ffe8e8"/>
+                  <stop offset="100%" stop-color="#ffd2a8"/>
+                </linearGradient>
+                <linearGradient id="box2" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#e2f0ff"/>
+                  <stop offset="100%" stop-color="#c2e0ff"/>
+                </linearGradient>
+                <linearGradient id="box3" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#d7ffd9"/>
+                  <stop offset="100%" stop-color="#b1f3be"/>
+                </linearGradient>
+              </defs>
+
+              <!-- Image de départ -->
+              <rect x="20" y="55" width="110" height="90" rx="16" fill="url(#box1)" />
+              <rect x="32" y="67" width="86" height="64" rx="10" fill="#ffffff" stroke="#ffb396"/>
+              <circle cx="55" cy="88" r="10" fill="#ff6b6b"/>
+              <circle cx="95" cy="88" r="10" fill="#4dabf7"/>
+              <rect x="52" y="108" width="42" height="10" rx="5" fill="#ffd66b"/>
+              <text x="75" y="132" text-anchor="middle" font-size="12" fill="#884030">
+                Image
+              </text>
+
+              <!-- Flèche 1 -->
+              <polygon points="145,100 185,100 185,90 205,110 185,130 185,120 145,120"
+                       fill="#8fb3ff"/>
+
+              <!-- Boîte son -->
+              <rect x="210" y="50" width="140" height="100" rx="16" fill="url(#box2)" />
+              <path d="M225 115 Q245 105 265 115 T305 115 T345 115"
+                    fill="none" stroke="#1a5fb4" stroke-width="3" />
+              <path d="M225 95 Q245 85 265 95 T305 95 T345 95"
+                    fill="none" stroke="#ff6b6b" stroke-width="2" stroke-dasharray="5 4"/>
+              <text x="280" y="76" text-anchor="middle" font-size="12" fill="#1a3a63">
+                Son SSTV
+              </text>
+              <text x="280" y="91" text-anchor="middle" font-size="11" fill="#1a3a63">
+                (bips &amp; sifflements)
+              </text>
+
+              <!-- Flèche 2 -->
+              <polygon points="360,100 400,100 400,90 420,110 400,130 400,120 360,120"
+                       fill="#8fd694"/>
+
+              <!-- Image reçue -->
+              <rect x="330" y="55" width="110" height="90" rx="16" fill="url(#box3)" />
+              <rect x="342" y="67" width="86" height="64" rx="10" fill="#ffffff" stroke="#91d6a4"/>
+              <circle cx="365" cy="88" r="10" fill="#ff6b6b"/>
+              <circle cx="405" cy="88" r="10" fill="#4dabf7"/>
+              <rect x="362" y="108" width="42" height="10" rx="5" fill="#ffd66b"/>
+              <text x="385" y="132" text-anchor="middle" font-size="12" fill="#246045">
+                Image décodée
+              </text>
+            </svg>
+            <div class="illu-caption">
+              Ton dessin → transformé en son → redevenu dessin chez ton ami.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMMENT ÇA MARCHE -->
+      <section id="how">
+        <div class="pill">Comment ça marche ?</div>
+        <h2><span class="emoji">🧠</span> Le principe en 4 idées simples</h2>
+        <ol>
+          <li>L’image est coupée en <strong>lignes horizontales</strong> (comme les lignes d’un cahier).</li>
+          <li>Pour chaque ligne, la couleur de chaque pixel est transformée en une
+            <strong>fréquence</strong> (une note plus ou moins aiguë).</li>
+          <li>Le mode <strong>Robot 36</strong> décide de l’ordre, de la vitesse et des petits sons “de repère”
+            au début pour que le téléphone s’y retrouve.</li>
+          <li>Quand Robot36 écoute le son, il refait l’opération inverse et
+            <strong>recolle tous les pixels</strong> pour afficher la photo.</li>
+        </ol>
+
+        <!-- Illustration 2 : zoom sur une ligne + onde -->
+        <div class="illustration">
+          <svg class="illu-svg" viewBox="0 0 460 210" role="img" aria-labelledby="illu-line-title">
+            <title id="illu-line-title">
+              Une ligne de pixels transformée en une onde sonore
+            </title>
+
+            <!-- Ligne de pixels -->
+            <rect x="30" y="40" width="400" height="32" rx="6" fill="#fdfdfd" stroke="#dde2ef"/>
+            <rect x="36"  y="44" width="30" height="24" rx="4" fill="#ff8b8b"/>
+            <rect x="72"  y="44" width="30" height="24" rx="4" fill="#ffd66b"/>
+            <rect x="108" y="44" width="30" height="24" rx="4" fill="#8ce0ff"/>
+            <rect x="144" y="44" width="30" height="24" rx="4" fill="#9b8cff"/>
+            <rect x="180" y="44" width="30" height="24" rx="4" fill="#88e19c"/>
+            <rect x="216" y="44" width="30" height="24" rx="4" fill="#ffb3e1"/>
+            <rect x="252" y="44" width="30" height="24" rx="4" fill="#ffc58a"/>
+            <rect x="288" y="44" width="30" height="24" rx="4" fill="#a0c4ff"/>
+            <rect x="324" y="44" width="30" height="24" rx="4" fill="#caffbf"/>
+            <rect x="360" y="44" width="30" height="24" rx="4" fill="#ffd6a5"/>
+
+            <text x="230" y="31" text-anchor="middle" font-size="12" fill="#394557">
+              Ligne de pixels
+            </text>
+
+            <!-- Flèche -->
+            <polygon points="220,86 240,86 240,78 260,98 240,118 240,110 220,110"
+                     fill="#4dabf7"/>
+
+            <!-- Onde -->
+            <rect x="40" y="125" width="380" height="60" rx="10" fill="#f2f6ff" stroke="#d0dcf4"/>
+            <path d="M55 155
+                     Q70 135 85 155
+                     T115 155
+                     T145 155
+                     Q160 175 175 155
+                     T205 155
+                     Q220 135 235 155
+                     T265 155
+                     Q280 175 295 155
+                     T325 155
+                     Q340 135 355 155
+                     T385 155"
+                  fill="none" stroke="#1a5fb4" stroke-width="3"/>
+
+            <text x="230" y="203" text-anchor="middle" font-size="12" fill="#394557">
+              Onde sonore SSTV correspondant à cette ligne
+            </text>
+          </svg>
+          <div class="illu-caption">
+            Chaque couleur → une note : la ligne du dessin devient une petite “mélodie de pixels”.
+          </div>
+        </div>
+      </section>
+
+      <!-- TUTORIEL ROBOT36 -->
+      <section id="tutorial">
+        <div class="pill">Tutoriel</div>
+        <h2><span class="emoji">📱</span> Décoder une image SSTV avec l’appli Robot36</h2>
+        <p>
+          Tu vas utiliser ton smartphone Android comme une <strong>loupe à messages secrets</strong>.
+        </p>
+
+        <p><strong>1. Installe l’application Robot36</strong></p>
+        <p>
+          Sur Android, télécharge l’application gratuite :
+        </p>
+        <p>
+          <a class="button-link"
+             href="https://play.google.com/store/apps/details?id=xdsopl.robot36"
+             target="_blank" rel="noopener">
+            <span class="icon">⬇️</span>
+            <span>Télécharger Robot36 – SSTV Image Decoder</span>
+          </a>
+        </p>
+
+        <p><strong>2. Prépare le son à décoder</strong></p>
+        <ul>
+          <li>Ça peut être un <strong>fichier audio</strong> (.wav, .mp3…) sur ton ordinateur.</li>
+          <li>Ou une vidéo YouTube qui joue un signal SSTV Robot36.</li>
+          <li>Ou même un vrai signal radio si tu as le matériel.</li>
+        </ul>
+
+        <p><strong>3. Lance Robot36</strong></p>
+        <ul>
+          <li>Ouvre l’appli sur ton téléphone.</li>
+          <li>Par défaut, elle écoute le micro et détecte toute seule le mode (dont Robot36).</li>
+        </ul>
+
+        <p><strong>4. Place ton téléphone près du haut-parleur</strong></p>
+        <ul>
+          <li>Colle le micro du téléphone contre le haut-parleur de ton PC, de ta radio, etc.</li>
+          <li>Évite les bruits autour (pas de musique, pas de gens qui crient).</li>
+        </ul>
+
+        <p><strong>5. Lance le son SSTV</strong></p>
+        <ul>
+          <li>Appuie sur “lecture” sur le fichier audio ou la vidéo.</li>
+          <li>Tu entends un bruit un peu <em>alien</em> ? C’est bon signe !</li>
+          <li>Ne touche plus au volume pendant la transmission.</li>
+        </ul>
+
+        <p><strong>6. Regarde l’image apparaître</strong></p>
+        <ul>
+          <li>Dans Robot36, tu vois l’image se construire <strong>ligne par ligne</strong>.</li>
+          <li>À la fin, elle se fige : le message secret est décodé !</li>
+        </ul>
+
+        <p><strong>7. Sauvegarde ton image</strong></p>
+        <ul>
+          <li>L’appli peut enregistrer automatiquement l’image dans la galerie.</li>
+          <li>Tu peux ensuite l’envoyer à tes amis, ou la réutiliser comme nouveau message à cacher.</li>
+        </ul>
+
+        <div class="tips">
+          <div class="tip">
+            <span class="icon">💡</span>
+            <div>
+              Si Robot36 n’arrive pas à reconnaître le mode, tu peux ouvrir le menu des modes
+              et choisir <strong>Robot 36</strong> manuellement.
+            </div>
+          </div>
+          <div class="tip">
+            <span class="icon">🎧</span>
+            <div>
+              Si l’image est pleine de lignes bizarres, baisse un peu le volume ou rapproche
+              davantage le téléphone du haut-parleur.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- A TOI DE JOUER -->
+      <section id="play">
+        <div class="pill">À toi de jouer</div>
+        <h2><span class="emoji">🎲</span> Des idées de jeux avec Robot36</h2>
+        <ul>
+          <li>
+            <strong>Chasse au trésor</strong> :
+            chaque indice est une image SSTV que les joueurs doivent décoder.
+          </li>
+          <li>
+            <strong>Cartes de vœux secrètes</strong> :
+            tu caches un message dans une image drôle, encodée en Robot36.
+          </li>
+          <li>
+            <strong>Club des espions</strong> :
+            votre “agence” utilise Robot36 comme système de messages ultra-discret.
+          </li>
+        </ul>
+        <p>
+          L’important : s’amuser, expérimenter, et poser toutes les questions qui te viennent.
+          La cryptographie et la radio, c’est un terrain de jeu immense !
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      Fait pour des jeunes curieux – n’hésite pas à adapter les textes et les exemples
+      selon ta classe ou ton club.
+    </footer>
+  </div>
+</body>
+</html>
